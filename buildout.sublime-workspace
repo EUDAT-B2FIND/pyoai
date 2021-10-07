@@ -1,0 +1,306 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p",
+				"publication_year"
+			],
+			[
+				"a",
+				"affiliation"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/al/md-ingestion/oaidata/rodare/ckan/00a36e58-e9c7-5bdb-bc80-e3c7d4661843.json",
+		"/home/al/schema-doc/field_keywords.rst",
+		"/home/al/schema-doc/field_contributor.rst",
+		"/home/al/schema-doc/field_language.rst",
+		"/home/al/schema-doc/field_relatedidentifier.rst",
+		"/home/al/schema-doc/conf.py",
+		"/home/al/schema-doc/field_identifier.rst",
+		"/home/al/schema-doc/index.rst",
+		"/home/al/schema-doc/field_publicationyear.rst",
+		"/home/al/schema-doc/field_creator.rst",
+		"/home/al/schema-doc/field_instrument.rst",
+		"/home/al/schema-doc/introduction.rst",
+		"/home/al/schema-doc/field_community.rst",
+		"/home/al/md-ingestion/tests/test_classify.py",
+		"/home/al/md-ingestion/etc/b2find_disciplines.json",
+		"/home/al/md-ingestion/mdingestion/community/lago.py",
+		"/home/al/schema-doc/field_rights.rst",
+		"/home/al/schema-doc/field_resourcetype.rst",
+		"/home/al/schema-doc/field_publisher.rst",
+		"/home/al/schema-doc/field_contact.rst",
+		"/home/al/schema-doc/README.md",
+		"/home/al/schema-doc/field_size.rst",
+		"/home/al/schema-doc/field_metadataaccess.rst",
+		"/home/al/schema-doc/field_description.rst",
+		"/home/al/schema-doc/field_temporalcoverage.rst",
+		"/home/al/md-ingestion/etc/Community/INRAE_MappingSubject__Discipline_new.csv",
+		"/home/al/md-ingestion/etc/Community/INRAE_MappingSubject__Discipline.csv",
+		"/home/al/md-ingestion/.gitignore",
+		"/home/al/md-ingestion/tests/community/test_danseasy.py",
+		"/home/al/md-ingestion/notebooks/keyword_dictionary.ipynb",
+		"/home/al/ckan/ckan/i18n/ckan.pot",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/snippets/pubyear_search.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/fanstatic/localforage.js",
+		"/home/al/ckanext-b2find/ckanext/b2find/fanstatic/lodash.js",
+		"/home/al/ckanext-b2find/ckanext/b2find/fanstatic/webassets.yml",
+		"/home/al/ckanext-b2find/ckanext/b2find/fanstatic/bootstrap-datepicker.js",
+		"/home/al/ckanext-b2find/ckanext/b2find/fanstatic/angular.js",
+		"/home/al/ckanext-b2find/ckanext/b2find/fanstatic/moment.js",
+		"/home/al/ckanext-b2find/ckanext/b2find/fanstatic/datepicker.css",
+		"/home/al/md-ingestion/mdingestion/community/ess.py",
+		"/home/al/ckanext-datesearch/ckanext/datesearch/fanstatic/webassets.yml",
+		"/home/al/ckanext-datesearch/ckanext/datesearch/plugin.py",
+		"/home/al/ckanext-datesearch/ckanext/datesearch/__init__.py",
+		"/home/al/ckanext-datesearch/ckanext/__init__.py",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/package/read.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/group/snippets/info.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/group/read_base.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/package/read_base.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/group/index.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/group/snippets/group_form.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/home/layout1.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/home/snippets/search.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/home/index.html",
+		"/home/al/schema-doc/field_spatialcoverage.rst",
+		"/home/al/md-ingestion/mdingestion/community/midas.py",
+		"/home/al/md-ingestion/summary/nird/2021-07-01_nird_summary.json",
+		"/home/al/md-ingestion/mdingestion/community/nird.py",
+		"/home/al/md-ingestion/oaidata/midas/raw/1c9de131-3c90-5811-af00-4fdd550d746b.xml",
+		"/home/al/md-ingestion/oaidata/midas/ckan/1c9de131-3c90-5811-af00-4fdd550d746b.json",
+		"/home/al/ckanext-b2find/ckanext/b2find/plugin.py",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/base.html",
+		"/home/al/md-ingestion/oaidata/nird/raw/0a7e0673-bbbe-5d76-927b-e3b89fd61aad.xml",
+		"/home/al/md-ingestion/summary/nird/2021-06-29_nird_summary.json",
+		"/home/al/md-ingestion/oaidata/nird/ckan/0a7e0673-bbbe-5d76-927b-e3b89fd61aad.json",
+		"/home/al/md-ingestion/README.md",
+		"/home/al/ckanext-b2find/ckanext/b2find/public/schema/b2f/2.0/meta.xsd",
+		"/home/al/schema-doc/field_format.rst",
+		"/home/al/ckanext-b2find/ckanext/b2find/public/schemas/b2find_schema_2.0.xsd",
+		"/home/al/schema-doc/_sources/field_contact.rst.txt",
+		"/home/al/schema-doc/_sources/field_language.rst.txt",
+		"/home/al/schema-doc/_sources/field_rights.rst.txt",
+		"/home/al/schema-doc/_sources/field_openaccess.rst.txt",
+		"/home/al/schema-doc/_sources/field_contributor.rst.txt",
+		"/home/al/schema-doc/_sources/field_fundingreference.rst.txt",
+		"/home/al/schema-doc/_sources/field_creator.rst.txt",
+		"/home/al/md-ingestion/mdingestion/community/bluecloud.py",
+		"/home/al/md-ingestion/mdingestion/sniffer.py",
+		"/home/al/md-ingestion/mdingestion/reader/iso19139.py",
+		"/home/al/md-ingestion/mdingestion/community/enes.py",
+		"/home/al/md-ingestion/mdingestion/community/deims.py",
+		"/home/al/md-ingestion/mdingestion/community/pangaea.py",
+		"/home/al/md-ingestion/oaidata/bluecloud/ckan/01a63a36-4bb3-5cb6-b7e5-3afe3cd4c362.json",
+		"/home/al/md-ingestion/oaidata/bluecloud/raw/01a63a36-4bb3-5cb6-b7e5-3afe3cd4c362.xml",
+		"/home/al/md-ingestion/tools/purge_dataset_eudatmd2.py",
+		"/home/al/md-ingestion/mdingestion/command/purge.py",
+		"/home/al/md-ingestion/mdingestion/cli.py",
+		"/home/al/md-ingestion/tools/search.py",
+		"/home/al/md-ingestion/mdingestion/command/search.py",
+		"/home/al/md-ingestion/mdingestion/command/__init__.py",
+		"/home/al/md-ingestion/mdingestion/community/askeladden.py",
+		"/home/al/md-ingestion/mdingestion/community/slks_dc.py",
+		"/home/al/md-ingestion/mdingestion/command/map.py",
+		"/home/al/md-ingestion/mdingestion/community/nordicar.py",
+		"/home/al/md-ingestion/mdingestion/community/eudat.py",
+		"/home/al/md-ingestion/tests/community/test_radar.py",
+		"/home/al/md-ingestion/mdingestion/reader/datacite.py",
+		"/home/al/md-ingestion/mdingestion/community/psi.py",
+		"/home/al/md-ingestion/mdingestion/community/b2find.py",
+		"/home/al/md-ingestion/oaidata/psi/raw/3fde910b-4a83-5517-859f-f0da0b92bd83.xml",
+		"/home/al/md-ingestion/summary/psi/2021-04-09_psi_summary_short.txt",
+		"/home/al/md-ingestion/summary/psi/2021-03-17_psi_summary_short.txt",
+		"/home/al/md-ingestion/mdingestion/classify.py",
+		"/home/al/md-ingestion/mdingestion/community/inrae.py",
+		"/home/al/md-ingestion/mdingestion/core/schema.py",
+		"/home/al/md-ingestion/tests/community/test_pdc.py",
+		"/home/al/md-ingestion/tests/community/test_herbadrop.py",
+		"/home/al/md-ingestion/tests/community/test_geofon.py",
+		"/home/al/md-ingestion/tests/community/test_ess.py",
+		"/home/al/md-ingestion/tests/community/test_dara.py",
+		"/home/al/md-ingestion/tests/community/test_darus.py",
+		"/home/al/md-ingestion/tests/community/test_envidat.py",
+		"/home/al/md-ingestion/mdingestion/core/doc.py",
+		"/home/al/md-ingestion/mdingestion/community/heidata.py",
+		"/home/al/md-ingestion/oaidata/inrae/raw/0b37fc62-5dd3-5db6-ba6a-b4d4f942d17a.xml",
+		"/home/al/md-ingestion/mdingestion/community/dataversenl.py",
+		"/home/al/md-ingestion/mdingestion/community/ivoa.py",
+		"/home/al/md-ingestion/mdingestion/harvester/oai.py",
+		"/home/al/md-ingestion/oaidata/askeladden/raw/54386ef6-59f4-5955-9360-e6aa800a3677.json",
+		"/home/al/md-ingestion/oaidata/askeladden/ckan/54386ef6-59f4-5955-9360-e6aa800a3677.json",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/ckanext/docs/guidelines/mapping.html",
+		"/home/al/ckanext-b2find/ckanext/b2find/templates/ckanext/docs/guidelines/providing.html",
+		"/home/al/md-ingestion/tests/community/test_fidgeo.py",
+		"/home/al/md-ingestion/oaidata/dataversenl/ckan/f2d8fec9-89f0-5035-ae70-4fb6fb861a2e.json",
+		"/home/al/md-ingestion/oaidata/dataversenl/raw/f2d8fec9-89f0-5035-ae70-4fb6fb861a2e.xml",
+		"/home/al/md-ingestion/mdingestion/reader/dc.py",
+		"/home/al/schema-doc/docs/index.rst",
+		"/home/al/schema-doc/docs/field_creator.rst",
+		"/home/al/schema-doc/docs/field_publisher.rst"
+	],
+	"find":
+	{
+		"height": 53.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 41.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "buildout.sublime-project",
+	"replace":
+	{
+		"height": 78.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/md-ingestion/mapfiles/seadatanet-oai_dc.xml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 439.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

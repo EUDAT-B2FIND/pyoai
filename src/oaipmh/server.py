@@ -1,6 +1,8 @@
 from lxml.etree import ElementTree, Element, SubElement
 from lxml import etree
 from datetime import datetime
+import base64
+
 try:
     from urllib.parse import urlencode, quote, unquote
 except ImportError:
@@ -448,11 +450,13 @@ def encodeResumptionToken(kw, cursor):
     until = kw.get('until')
     if until is not None:
         kw['until'] = datetime_to_datestamp(until)
-    return quote(urlencode(kw))
+    #return quote(urlencode(kw))
+    return base64.b64encode(bytes(urlencode(kw), 'utf-8'))
 
 def decodeResumptionToken(token):
-    token = str(unquote(token))
-    
+    #token = str(unquote(token))
+    token = base64.b64decode(token).decode('utf-8')
+
     try:
         kw = cgi.parse_qs(token, True, True)
     except ValueError:
@@ -464,6 +468,7 @@ def decodeResumptionToken(token):
         if key == 'from_' or key == 'until':
             value = datestamp_to_datetime(value)
         result[key] = value
+
     try:
         cursor = int(result.pop('cursor'))
     except (KeyError, ValueError):
