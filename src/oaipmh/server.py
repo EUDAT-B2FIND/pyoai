@@ -131,7 +131,8 @@ class XMLTreeServer(object):
                 self._outputHeader(e_record, header)
                 if not header.isDeleted():
                     self._outputMetadata(e_record, metadataPrefix, metadata)
-                # XXX about
+                    if about:
+                        self._outputAbout(e_record, about)
         self._outputResuming(
             e_listRecords,
             self._server.listRecords,
@@ -244,22 +245,23 @@ class XMLTreeServer(object):
             metadata_prefix, e_metadata, metadata)
 
     def _outputAbout(self, element, about):
-        e_about = SubElement(element, nsoai('about'))
-        e_provenance = SubElement(e_about, nsoai('provenance'))
-        e_provenance.set ('xmlns', 'http://www.openarchives.org/OAI/2.0/provenance')
-        e_provenance.set ('{%s}schemaLocation' % NS_XSI, 'http://www.openarchives.org/OAI/2.0/provenance http://www.openarchives.org/OAI/2.0/provenance.xsd')
-        e_originDescription = SubElement(e_provenance, nsoai('originDescription'))
-        e_originDescription.set ('harvestDate', datetime_to_datestamp(about.harvestDate()))
-        e_originDescription.set ('altered', "true")
-        e_baseURL = SubElement(e_originDescription, nsoai('baseURL'))
-        e_baseURL.text = about.baseURL()
-        e_identifier = SubElement(e_originDescription, nsoai('identifier'))
-        e_identifier.text = about.identifier()
-        e_datestamp = SubElement(e_originDescription, nsoai('datestamp'))
-#        e_datestamp.text = datetime_to_datestamp(about.datestamp())
-        e_datestamp.text = about.datestamp()
-        e_metadataNamespace = SubElement(e_originDescription, nsoai('metadataNamespace'))
-        e_metadataNamespace.text = about.metadataNamespace()
+        if about.baseURL():
+            e_about = SubElement(element, nsoai('about'))
+            e_provenance = SubElement(e_about, nsoai('provenance'))
+            e_provenance.set ('xmlns', 'http://www.openarchives.org/OAI/2.0/provenance')
+            e_provenance.set ('{%s}schemaLocation' % NS_XSI, 'http://www.openarchives.org/OAI/2.0/provenance http://www.openarchives.org/OAI/2.0/provenance.xsd')
+            e_originDescription = SubElement(e_provenance, nsoai('originDescription'))
+            e_originDescription.set ('harvestDate', datetime_to_datestamp(about.harvestDate()))
+            e_originDescription.set ('altered', "true")
+            e_baseURL = SubElement(e_originDescription, nsoai('baseURL'))
+            e_baseURL.text = about.baseURL()
+            e_identifier = SubElement(e_originDescription, nsoai('identifier'))
+            e_identifier.text = about.identifier()
+            e_datestamp = SubElement(e_originDescription, nsoai('datestamp'))
+#           e_datestamp.text = datetime_to_datestamp(about.datestamp())
+            e_datestamp.text = about.datestamp()
+            e_metadataNamespace = SubElement(e_originDescription, nsoai('metadataNamespace'))
+            e_metadataNamespace.text = about.metadataNamespace()
 
 class ServerBase(common.ResumptionOAIPMH):
     """A server that responds to messages by returning OAI-PMH compliant XML.
