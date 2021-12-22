@@ -246,7 +246,11 @@ class XMLTreeServer(object):
     def _outputAbout(self, element, about):
         e_about = SubElement(element, nsoai('about'))
         e_provenance = SubElement(e_about, nsoai('provenance'))
+        e_provenance.set ('xmlns', 'http://www.openarchives.org/OAI/2.0/provenance')
+        e_provenance.set ('xsi:schemaLocation', 'http://www.openarchives.org/OAI/2.0/provenance http://www.openarchives.org/OAI/2.0/provenance.xsd')
         e_originDescription = SubElement(e_provenance, nsoai('originDescription'))
+        e_originDescription.set ('harvestDate', datetime_to_datestamp(about.harvestDate()))
+        e_originDescription.set ('altered', "true")
         e_baseURL = SubElement(e_originDescription, nsoai('baseURL'))
         e_baseURL.text = about.baseURL()
         e_identifier = SubElement(e_originDescription, nsoai('identifier'))
