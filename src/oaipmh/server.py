@@ -252,7 +252,8 @@ class XMLTreeServer(object):
         e_identifier = SubElement(e_originDescription, nsoai('identifier'))
         e_identifier.text = about.identifier()
         e_datestamp = SubElement(e_originDescription, nsoai('datestamp'))
-        e_datestamp.text = datetime_to_datestamp(about.datestamp())
+#        e_datestamp.text = datetime_to_datestamp(about.datestamp())
+        e_datestamp.text = about.datestamp()
         e_metadataNamespace = SubElement(e_originDescription, nsoai('metadataNamespace'))
         e_metadataNamespace.text = about.metadataNamespace()
 
