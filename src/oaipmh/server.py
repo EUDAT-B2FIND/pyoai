@@ -46,6 +46,8 @@ class XMLTreeServer(object):
         self._outputHeader(e_record, header)   
         if not header.isDeleted():
             self._outputMetadata(e_record, kw['metadataPrefix'], metadata)
+            if about:
+                self._outputAbout(e_record, about)
         return envelope
 
     def getMetadata(self, **kw):
@@ -240,6 +242,19 @@ class XMLTreeServer(object):
                   "Unknown metadata format: %s" % metadata_prefix)
         self._metadata_registry.writeMetadata(
             metadata_prefix, e_metadata, metadata)
+
+    def _outputAbout(self, element, about):
+        e_about = SubElement(element, nsoai('about'))
+        e_provenance = SubElement(e_about, nsoai('provenance'))
+        e_originDescription = SubElement(e_provenance, nsoai('originDescription'))
+        e_baseURL = SubElement(e_originDescription, nsoai('baseURL'))
+        e_baseURL.text = about.baseURL()
+        e_identifier = SubElement(e_originDescription, nsoai('identifier'))
+        e_identifier.text = about.identifier()
+        e_datestamp = SubElement(e_originDescription, nsoai('datestamp'))
+        e_datestamp.text = datetime_to_datestamp(about.datestamp())
+        e_metadataNamespace = SubElement(e_originDescription, nsoai('metadataNamespace'))
+        e_metadataNamespace.text = about.metadataNamespace()
 
 class ServerBase(common.ResumptionOAIPMH):
     """A server that responds to messages by returning OAI-PMH compliant XML.
