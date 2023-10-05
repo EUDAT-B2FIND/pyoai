@@ -254,23 +254,29 @@ class XMLTreeServer(object):
             e_provenance = SubElement(e_about, nsoai('provenance'))
             e_provenance.set ('xmlns', 'http://www.openarchives.org/OAI/2.0/provenance')
             e_provenance.set ('{%s}schemaLocation' % NS_XSI, 'http://www.openarchives.org/OAI/2.0/provenance http://www.openarchives.org/OAI/2.0/provenance.xsd')
-            e_originDescription = SubElement(e_provenance, nsoai('originDescription'))
-            e_originDescription.set ('harvestDate', datetime_to_datestamp(about.harvestDate()))
-            e_originDescription.set ('altered', "true")
-            e_baseURL = SubElement(e_originDescription, nsoai('baseURL'))
-            e_baseURL.text = about.baseURL()
-            e_identifier = SubElement(e_originDescription, nsoai('identifier'))
-            e_identifier.text = about.identifier()
-            e_datestamp = SubElement(e_originDescription, nsoai('datestamp'))
-#           e_datestamp.text = datetime_to_datestamp(about.datestamp())
-            e_datestamp.text = about.datestamp()
-            e_metadataNamespace = SubElement(e_originDescription, nsoai('metadataNamespace'))
-            e_metadataNamespace.text = about.metadataNamespace()
-            e_repositoryID = SubElement(e_originDescription, nsoai('repositoryID'))
-            e_repositoryID.text = about.repositoryID()
-            e_repositoryName = SubElement(e_originDescription, nsoai('repositoryName'))
-            e_repositoryName.text = about.repositoryName()
+            self._outputOriginDescription(e_provenance, about)
 
+    def _outputOriginDescription(self, element, about):
+        e_originDescription = SubElement(element, nsoai('originDescription'))
+        e_originDescription.set ('harvestDate', datetime_to_datestamp(about.harvestDate()))
+        e_originDescription.set ('altered', "true")
+        e_baseURL = SubElement(e_originDescription, nsoai('baseURL'))
+        e_baseURL.text = about.baseURL()
+        e_identifier = SubElement(e_originDescription, nsoai('identifier'))
+        e_identifier.text = about.identifier()
+        e_datestamp = SubElement(e_originDescription, nsoai('datestamp'))
+        #  e_datestamp.text = datetime_to_datestamp(about.datestamp())
+        e_datestamp.text = about.datestamp()
+        e_metadataNamespace = SubElement(e_originDescription, nsoai('metadataNamespace'))
+        e_metadataNamespace.text = about.metadataNamespace()
+        e_repositoryID = SubElement(e_originDescription, nsoai('repositoryID'))
+        e_repositoryID.text = about.repositoryID()
+        e_repositoryName = SubElement(e_originDescription, nsoai('repositoryName'))
+        e_repositoryName.text = about.repositoryName()
+        if about.originDescription():
+            self._outputOriginDescription(e_originDescription, about.originDescription())
+
+    
 class ServerBase(common.ResumptionOAIPMH):
     """A server that responds to messages by returning OAI-PMH compliant XML.
 
